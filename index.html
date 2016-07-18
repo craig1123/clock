@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="momento">
+  <head>
+    <meta charset="utf-8">
+    <title>Clock</title>
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="myCtrl">
+
+<div class="buttons">
+  <input type="button" value="Date" ng-click="showDate = !showDate">
+  <input type="button" value="Time" ng-click="showTime = !showTime">
+</div>
+
+<div class="date"  id="date" ng-show="showDate">
+  {{date}}
+</div>
+
+
+  <div ng-show="showTime" id="clock" class="clock">loading ...</div>
+
+<section>
+  <article class="css_clock">
+    <div class="hours-container">
+      <div class="hours"></div>
+    </div>
+    <div class="minutes-container">
+      <div class="minutes"></div>
+    </div>
+    <div class="seconds-container">
+      <div class="seconds"></div>
+    </div>
+  </article>
+
+</section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
+    <script src="momento.js" charset="utf-8"></script>
+  </body>
+</html>
